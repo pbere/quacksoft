@@ -1,0 +1,4 @@
+#Sun Mar 18 22:21:24 CET 2018
+base.0=/Users/urbana01/quacksoft/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/Users/urbana01/quacksoft/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
