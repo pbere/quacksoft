@@ -19,7 +19,48 @@
 -->
 <html>
     <head>
-        <!--
+        <style>#canvas
+        {
+        border:1px solid black;
+        width:500px;
+        height:500px;
+        }
+        </style>
+        <script>
+            var CANVAS_WIDTH = 500;
+            var CANVAS_HEIGHT = 500;
+            
+            var canvas;
+            var ctx;
+            
+            var img = new Image();
+            img.src = "/img/choose.gif";
+            
+            window.onload = onAllAssetsLoaded;
+            document.write("<div id='loadingMessage'>Loading...</div>");
+            function onAllAssetsLoaded()
+            {
+                // hide the webpage loading message
+                document.getElementById('loadingMessage').style.visibility = "hidden";
+                
+                canvas = document.getElementById("canvas");
+                ctx = canvas.getContext("2d");
+                canvas.width = CANVAS_WIDTH;
+                canvas.height = CANVAS_HEIGHT;
+                
+                renderCanvas();
+            }
+        
+        
+        function renderCanvas()
+        {
+            ctx.drawImage(img, 0, 0);
+            ctx.drawImage(img, 300, 400, 200, 100);
+        }
+        </script>
+      
+      
+      <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -37,11 +78,9 @@
     </head>
     <body>
         <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+            <canvas id = "canvas">
+                Your browser does not support the HTML5 'Canvas' tag.
+            </canvas>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
