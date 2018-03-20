@@ -40,7 +40,22 @@ receivedEvent: function(id) {
     receivedElement.setAttribute('style', 'display:block;');
     
     console.log('Received Event: ' + id);
+    var canvas = document.getElementById("canvas1");
+    var ctx = canvas.getContext("2d");
+    var img = new Image();
+    img.src = "choose.gif";
+    canvas.width = 123;
+    canvas.height = 345;
+    
+    renderCanvas();
 }
+    function renderCanvas()
+    {
+        ctx.drawImage(img, 0, 0, 234,567);
+        console.log("sdsasad");
+        
+    }
+    app.initialize();
 };
 
-app.initialize();
+
