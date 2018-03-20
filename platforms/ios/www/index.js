@@ -43,18 +43,18 @@ receivedEvent: function(id) {
     var canvas = document.getElementById("canvas1");
     var ctx = canvas.getContext("2d");
     var img = new Image();
-    img.src = "choose.gif";
+    img.src = "/choose.gif";
     canvas.width = 123;
     canvas.height = 345;
-    
-    renderCanvas();
-}
     function renderCanvas()
     {
-        ctx.drawImage(img, 0, 0, 234,567);
+        ctx.fillStyle = "red";
+        ctx.fillRect(100, 200, 600, 200);
         console.log("sdsasad");
         
     }
+    renderCanvas();
+}
     app.initialize();
 };
 
